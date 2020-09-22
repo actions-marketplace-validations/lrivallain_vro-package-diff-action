@@ -15,4 +15,4 @@ fi
 ## --empty-config:      Check for values in the configuration elements: if so, exit with failure status.
 ## --reference_package: Reference package to compare your package with.
 vro-diff --ascii --test --empty-config \
-        --reference_package $REF_TMP_PATH/$INPUT_PACKAGE_PATH $INPUT_PACKAGE_PATH
+        --reference_package "$REF_TMP_PATH/$INPUT_PACKAGE_PATH" "$INPUT_PACKAGE_PATH"
