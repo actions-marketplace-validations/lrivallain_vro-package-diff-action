@@ -1,4 +1,4 @@
-# lrivallain.vro-package-diff-action@v1
+# lrivallain.vro-package-diff-action@master
 
 Github action using vro-package-diff python package to compare two VMware vRealize Orchestrator packages.
 
@@ -12,7 +12,7 @@ Github action using vro-package-diff python package to compare two VMware vReali
 Include this in your `.github/workflows/<test>.yaml` after a `actions/checkout@v2` step:
 
 ```yaml
-uses: lrivallain/vro-package-diff-action@v1
+uses: lrivallain/vro-package-diff-action@master
 with:
   package_path: path/to/my/vro-package.package
 ```
@@ -20,7 +20,7 @@ with:
 or, if you want to override the defaults reference branch,
 
 ```yaml
-uses: lrivallain/vro-package-diff-action@v1
+uses: lrivallain/vro-package-diff-action@master
 with:
   package_path: path/to/my/vro-package.package
   branch: prod
@@ -29,7 +29,7 @@ with:
 If your repository is a private one, the action will require a temporary job token to get the reference branch:
 
 ```yaml
-uses: lrivallain/vro-package-diff-action@v1
+uses: lrivallain/vro-package-diff-action@master
 with:
   package_path: path/to/my/vro-package.package
   repo_token: ${{ secrets.GITHUB_TOKEN }}
@@ -43,7 +43,7 @@ runs-on: ubuntu-latest
 steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - uses: lrivallain/vro-package-diff-action@v1
+    - uses: lrivallain/vro-package-diff-action@master
       with:
         package_path: path/to/my/vro-package.package
         branch: prod
